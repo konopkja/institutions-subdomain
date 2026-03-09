@@ -26,7 +26,9 @@ export default async function WhyEthereum({ params }: Props) {
 
   return (
     <main className="row-start-2 flex flex-col items-center sm:items-start">
-      <Hero heading={t("hero.heading")} shape="eth-glyph" />
+      <Hero heading={t("hero.heading")} shape="eth-glyph">
+        <p className="text-xl">{t("hero.description")}</p>
+      </Hero>
       <article className="max-w-8xl mx-auto w-full space-y-20 px-4 py-10 sm:px-10 sm:py-20 md:space-y-40">
         {/* Section 1: The Institutional Problem */}
         <section id="problem" className="space-y-16">
@@ -59,55 +61,10 @@ export default async function WhyEthereum({ params }: Props) {
               <li className="text-muted-foreground ms-6 list-disc font-medium">
                 {t("problem.pressures.item5")}
               </li>
+              <li className="text-muted-foreground ms-6 list-disc font-medium">
+                {t("problem.pressures.item6")}
+              </li>
             </ul>
-          </div>
-
-          <div className="space-y-8">
-            <h3 className="text-h3-mobile sm:text-h3 tracking-[0.055rem]">
-              {t("problem.problems.heading")}
-            </h3>
-            <div className="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 sm:gap-y-14">
-              <CardContent>
-                <CardLabel variant="large">
-                  {t("problem.problems.fragmented")}
-                </CardLabel>
-                <div className="text-muted-foreground font-medium">
-                  {t("problem.problems.fragmentedDesc")}
-                </div>
-              </CardContent>
-              <CardContent>
-                <CardLabel variant="large">
-                  {t("problem.problems.delay")}
-                </CardLabel>
-                <div className="text-muted-foreground font-medium">
-                  {t("problem.problems.delayDesc")}
-                </div>
-              </CardContent>
-              <CardContent>
-                <CardLabel variant="large">
-                  {t("problem.problems.reconciliation")}
-                </CardLabel>
-                <div className="text-muted-foreground font-medium">
-                  {t("problem.problems.reconciliationDesc")}
-                </div>
-              </CardContent>
-              <CardContent>
-                <CardLabel variant="large">
-                  {t("problem.problems.programmability")}
-                </CardLabel>
-                <div className="text-muted-foreground font-medium">
-                  {t("problem.problems.programmabilityDesc")}
-                </div>
-              </CardContent>
-              <CardContent>
-                <CardLabel variant="large">
-                  {t("problem.problems.opacity")}
-                </CardLabel>
-                <div className="text-muted-foreground font-medium">
-                  {t("problem.problems.opacityDesc")}
-                </div>
-              </CardContent>
-            </div>
           </div>
         </section>
 
@@ -195,6 +152,26 @@ export default async function WhyEthereum({ params }: Props) {
             </p>
           </div>
 
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold tracking-[0.025rem]">
+              {t("risk.considerations.heading")}
+            </h3>
+            <ul className="max-w-prose space-y-3 list-disc">
+              <li className="text-muted-foreground ms-6 font-medium">
+                {t("risk.considerations.item1")}
+              </li>
+              <li className="text-muted-foreground ms-6 font-medium">
+                {t("risk.considerations.item2")}
+              </li>
+              <li className="text-muted-foreground ms-6 font-medium">
+                {t("risk.considerations.item3")}
+              </li>
+              <li className="text-muted-foreground ms-6 font-medium">
+                {t("risk.considerations.item4")}
+              </li>
+            </ul>
+          </div>
+
           <div className="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 sm:gap-y-14">
             <CardContent>
               <CardLabel variant="large">
@@ -224,35 +201,6 @@ export default async function WhyEthereum({ params }: Props) {
                 {t("risk.smartContract.description")}
               </div>
             </CardContent>
-          </div>
-
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold tracking-[0.025rem]">
-              {t("risk.mitigation.heading")}
-            </h3>
-            <ol className="max-w-prose space-y-3 list-decimal">
-              <li className="text-muted-foreground ms-6 font-medium">
-                {t("risk.mitigation.item1")}
-              </li>
-              <li className="text-muted-foreground ms-6 font-medium">
-                {t("risk.mitigation.item2")}
-              </li>
-              <li className="text-muted-foreground ms-6 font-medium">
-                {t("risk.mitigation.item3")}
-              </li>
-              <li className="text-muted-foreground ms-6 font-medium">
-                {t("risk.mitigation.item4")}
-              </li>
-              <li className="text-muted-foreground ms-6 font-medium">
-                {t("risk.mitigation.item5")}
-              </li>
-              <li className="text-muted-foreground ms-6 font-medium">
-                {t("risk.mitigation.item6")}
-              </li>
-              <li className="text-muted-foreground ms-6 font-medium">
-                {t("risk.mitigation.item7")}
-              </li>
-            </ol>
           </div>
 
           <p className="text-muted-foreground max-w-4xl font-medium">
